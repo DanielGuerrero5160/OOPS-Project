@@ -47,7 +47,7 @@ return carPrice;
 class CarTester{
     public static void main(String[] args) {
         Truck t=new Truck("blue",100000);
-        System.out.println(t.calculateCarPrice(2002));
+        System.out.println(t.carColor+" car price is "+t.calculateCarPrice(2002));
         Sedan s=new Sedan("Black",50000);
         System.out.println(s.calculateCarPrice(22));
     }

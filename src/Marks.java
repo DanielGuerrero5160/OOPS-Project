@@ -35,9 +35,9 @@ int finance;
 class MarksTester{
     public static void main(String[] args) {
         A a = new A(80, 75, 98);
-        System.out.println(a.getPercentage());
+        System.out.println("Student 1 overall grade average is "+a.getPercentage());
         B b=new B(50,67,78,98);
-        b.getPercentage();
+        System.out.println("Student 2 overall grade average is " +b.getPercentage());
     }
 
 }

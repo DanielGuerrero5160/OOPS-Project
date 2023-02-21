@@ -6,23 +6,23 @@ public interface Shape {
 class Circle implements Shape{
     @Override
     public void calculateArea(int radius) {
-        System.out.println("The area of the circle is "+(radius*radius)*3.14159);
+        System.out.println("The area of the circle with radius "+radius+" is "+(radius*radius)*3.14159);
     }
 
     @Override
     public void calculatePerimeter(int radius) {
-        System.out.println("The perimeter if the circle is "+(radius*3.14159)*2);
+        System.out.println("The perimeter of the circle with radius "+radius+" is "+(radius*3.14159)*2);
     }
 }
 class Square implements Shape{
     @Override
     public void calculateArea(int side) {
-        System.out.println("The area of the square is "+side*side);
+        System.out.println("The area of the square with side "+side+" is "+side*side);
     }
 
     @Override
     public void calculatePerimeter(int side) {
-        System.out.println("The perimeter if the square is "+side*4);
+        System.out.println("The perimeter of the square with side "+side+" is "+side*4);
     }
 }
 class shapeTester{

@@ -4,10 +4,10 @@ public interface WebDriver {
     void close();
     String getTitle();
 }
- interface RemoteWebDriverInterface extends WebDriver {
+ interface RemoteWebDriverInterface extends WebDriver,TakesScreenShot {
     void navigate();
 }
-interface TakesScreenShot extends RemoteWebDriverInterface {
+interface TakesScreenShot{
     void getScreenshot();
 
 
@@ -15,63 +15,81 @@ interface TakesScreenShot extends RemoteWebDriverInterface {
 class ChromeDriver implements RemoteWebDriverInterface{
     @Override
     public void navigate() {
+        System.out.println("Chrome is navigating");
+    }
 
+    @Override
+    public void getScreenshot() {
+        System.out.println("Chrome is getting screenshot");
     }
 
     @Override
     public void open() {
-
+        System.out.println("Chrome is opening");
     }
 
     @Override
     public void close() {
-
+        System.out.println("Chrome is closing");
     }
 
     @Override
     public String getTitle() {
-        return null;
+
+        return "Getting title";
     }
 }
 class FirefoxDriver implements RemoteWebDriverInterface{
     @Override
     public void open() {
-
+        System.out.println("Firefox is opening");
     }
 
     @Override
     public void close() {
-
+        System.out.println("Firefox is closing");
     }
 
     @Override
     public String getTitle() {
-        return null;
+
+        return "Firefox is getting title";
     }
 
     @Override
     public void navigate() {
+        System.out.println("Firefox is navigating");
+    }
 
+    @Override
+    public void getScreenshot() {
+        System.out.println("FirefoxDriver getting screenshot");
     }
 }
 class SafariDriver implements RemoteWebDriverInterface{
     @Override
     public void open() {
-
+        System.out.println("Safari is opening");
     }
 
     @Override
     public void close() {
-
+        System.out.println("Safari is closing");
     }
 
     @Override
     public String getTitle() {
-        return null;
+
+        return "Safari is getting title";
     }
 
     @Override
     public void navigate() {
+        System.out.println("Safari is navigating");
+    }
+
+    @Override
+    public void getScreenshot() {
 
     }
 }
